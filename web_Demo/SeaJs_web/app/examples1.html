@@ -1,0 +1,29 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>examples1</title>
+</head>
+	<body>
+	<div id="body_div"></div>
+	    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="myChartMain" style="height:400px"></div>
+    </body>
+	 <script src="../sea-modules/seajs/seajs/2.2.0/sea.js"></script>
+	<script>
+
+  // Set configuration
+  seajs.config({
+    base: "../sea-modules/",
+	plugins: ["shim"],
+    alias: {
+      "jquery": "jquery/jquery/1.10.1/jquery.js",
+	  "echarts": "echarts/echartsTest.js"
+    }
+	
+  });
+
+  // For development
+  seajs.use("examples/examples1/1.0.0/main");
+</script>
+    </html>

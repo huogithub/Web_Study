@@ -1,0 +1,14 @@
+﻿ <h2>我的备忘录</h2>
+<form ng-submit="todoAdd()">
+    <input type="text" ng-model="todoInput" size="50" placeholder="新增">
+    <input type="submit" value="新增">
+</form>
+
+<br>
+
+<div ng-repeat="x in todoList">
+    <input type="checkbox" ng-model="x.done"> <span ng-bind="x.todoText"></span>
+</div>
+
+<p><button ng-click="remove()">删除记录</button></p>
+ 

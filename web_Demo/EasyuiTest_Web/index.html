@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+<title>requirejs_EasyUI_Demo</title>
+<link rel="stylesheet" type="text/css" href="css/themes/default/easyui.css" id="swicth-style">
+<link rel="stylesheet" type="text/css" href="css/themes/icon.css">
+<link rel="stylesheet" type="text/css" href="css/themes/demo.css">
+<style type="text/css">
+ body {
+	font: 12px/20px "微软雅黑", "宋体", Arial, sans-serif, Verdana, Tahoma;
+	padding: 0;
+	margin: 0;
+}
+.layout-split-proxy-h{
+	position:absolute;
+	width:2px;
+	background:#888;
+	font-size:1px;
+	cursor:e-resize;
+	display:none;
+	z-index:5;
+}
+
+.layout-split-north{
+	border-bottom:5px solid #efefef;
+}
+.layout-split-south{
+	border-top:5px solid #efefef;
+}
+.layout-split-east{
+	border-left:0px solid #efefef;
+}
+.layout-split-west{
+	border-right:0px solid #efefef;
+}
+a:link {
+ text-decoration: none;
+}
+a:visited {
+ text-decoration: none;
+}
+a:hover {
+ text-decoration: underline;
+}
+a:active {
+ text-decoration: none;
+}
+.cs-north {
+	height:60px;
+}
+.cs-north-bg {
+	width: 100%;
+	height: 100%;
+	background: url(themes/gray/images/header_bg.png) repeat-x;
+}
+.cs-north-logo {
+	height: 40px;
+	margin: 15px 0px 0px 5px;
+	display: inline-block;
+	color:#000000;font-size:22px;font-weight:bold;text-decoration:none
+}
+.cs-west {
+	width:200px;padding:0px;
+}
+.cs-navi-tab {
+	padding: 5px;
+}
+.cs-tab-menu {
+	width:120px;
+}
+.cs-home-remark {
+	padding: 10px;
+}
+.wrapper {
+    float: right;
+    height: 30px;
+    margin-left: 10px;
+}
+.ui-skin-nav {
+    float: right;
+	padding: 0;
+	margin-right: 10px;
+	list-style: none outside none;
+	height: 30px;
+}
+
+.ui-skin-nav .li-skinitem {
+    float: left;
+    font-size: 12px;
+    line-height: 30px;
+	margin-left: 10px;
+    text-align: center;
+}
+.ui-skin-nav .li-skinitem span {
+	cursor: pointer;
+	width:10px;
+	height:10px;
+	display:inline-block;
+}
+.ui-skin-nav .li-skinitem span.cs-skin-on{
+	border: 1px solid #FFFFFF;
+}
+
+.ui-skin-nav .li-skinitem span.gray{background-color:gray;}
+.ui-skin-nav .li-skinitem span.default{background-color:blue;}
+.ui-skin-nav .li-skinitem span.bootstrap{background-color:#D7EBF9;}
+.ui-skin-nav .li-skinitem span.black{background-color:black;}
+.ui-skin-nav .li-skinitem span.metro{background-color:#FFE57E;}
+</style>
+</head>
+<body class="easyui-layout">
+	<div id='Loading' style="position: absolute; z-index: 1000; top: 0px; left: 0px; width: 100%; height: 100%; background: gray; text-align: center;">
+		<h1 style="top: 48%; position: relative;">
+			<font color="#15428B">加载中···</font>
+		</h1>
+	</div>
+	<div region="north" border="true" class="cs-north">
+		<div class="cs-north-bg">
+			<div class="cs-north-logo">requirejs_EasyUI_Demo</div>
+			<ul class="ui-skin-nav">
+				<li class="li-skinitem" title="gray"><span class="gray" rel="gray"></span></li>
+				<li class="li-skinitem" title="default"><span class="default" rel="default"></span></li>
+				<li class="li-skinitem" title="bootstrap"><span class="bootstrap" rel="bootstrap"></span></li>
+				<li class="li-skinitem" title="black"><span class="black" rel="black"></span></li>
+				<li class="li-skinitem" title="metro"><span class="metro" rel="metro"></span></li>
+			</ul>
+		</div>
+	</div>
+	<div region="west" border="true" split="true" title="菜单列表"  class="cs-west"  id="menuSys">
+		<div class="easyui-accordion" fit="true" border="false">
+			<div title="Base">
+					<a href="javascript:void(0);" src="templates/testDemo/test.html" class="cs-navi-tab">test</a></p>
+					<a href="javascript:void(0);" src="templates/testDemo/test1.html" class="cs-navi-tab">test1</a></p>
+					<a href="javascript:void(0);" src="templates/testDemo/test2.html" class="cs-navi-tab">test2</a></p>
+					<a href="javascript:void(0);" src="templates/testDemo/test3.html" class="cs-navi-tab">test3</a></p>
+					<a href="javascript:void(0);" src="templates/testDemo/test4.html"  class="cs-navi-tab">test4</a></p>
+			</div>
+		</div>
+	</div>
+	<div region="center" border="true" border="false" id="mainPanle_div">
+		<div id="mainPanle" class="easyui-tabs" fit="true" border="false">
+			<div title="Home">
+				<div>
+					<h1>Hello Word!!!!!!!!!!!!!!!!!!!!!</h1>
+ 
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div region="south" border="false" id="south">
+		<center>@tianshaojie@foxmail.com</center>
+ 	</div>
+	<div id="mm" class="easyui-menu">
+		<div id="mm-tabupdate">刷新</div>
+		<div class="menu-sep"></div>
+		<div id="mm-tabclose">关闭</div>
+		<div id="mm-tabcloseother">关闭其他</div>
+		<div id="mm-tabcloseall">关闭全部</div>
+	</div>
+	<script data-main="js/main.js" src="js/lib/requirejs/require-2.1.20.min.js"></script>
+   <script src="js/config.js"></script>
+</body>
+
+</html>

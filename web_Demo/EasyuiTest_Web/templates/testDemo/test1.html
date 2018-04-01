@@ -1,0 +1,20 @@
+<h2>Row Editing in DataGrid</h2>
+	<div class="demo-info">
+		<div class="demo-tip icon-tip"></div>
+		<div>Click the row to start editing.</div>
+	</div>
+	<div style="margin:10px 0;"></div>
+	
+	<table id="dg_ProductInfo_test1" class="easyui-datagrid" style="width:700px;height:auto">
+ 	</table>
+
+	<div id="dg_test1_tb" style="height:auto">
+		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-add',plain:true" onclick="testDemo.test1.append()">Append</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-remove',plain:true" onclick="testDemo.test1.removeit()">Remove</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-save',plain:true" onclick="testDemo.test1.accept()">Accept</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-undo',plain:true" onclick="testDemo.test1.reject()">Reject</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-search',plain:true" onclick="testDemo.test1.getChanges()">GetChanges</a>
+	</div>
+	<script type="text/javascript">
+	testDemo.test1.init();
+  </script>
